@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Pesanan #{orderNumber} Sukses</title>
+      <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+      {componentStyleCss}
+</head>
+
+<body>
+      <div class="container">
+            <div class="logo">
+                  <img src="{logo}" alt="logo">
+            </div>
+            <h1 class="name">Hi, {nameCustomer}</h1>
+            <p class="content-description">Pesanan dengan nomor <strong class="text-blue">{orderNumber}</strong> telah
+                  dibuat. Segera lakukan pembayaran dengan
+                  <strong class="text-blue">{paymentMethod} {paymentCode}</strong> sebelum <strong
+                        class="text-blue">{paymentDueDate}</strong>.
+            </p>
+            <p>Segera lakukan pembayaran pesananmu dengan detil sebagai berikut: </p>
+            {componentPaymentInformation}
+            {componentHowToPay}
+            <hr />
+            {componentProduct}
+            <hr />
+            {componentDetailOrder}
+            {componentShippingAddress}
+            {componentFooter}
+      </div>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Pesanan #{orderNumber} Sukses</title>
+      <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+      <!-- {componentStyleCss} -->
+      <style>
+            body {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+            }
+
+            hr {
+                  border: 1px solid #BCBCBC;
+                  margin: 24px 0px;
+            }
+
+            .container {
+                  background-color: white;
+                  font-family: 'Poppins', 'sans-serif' !important;
+                  font-size: 14px;
+                  font-weight: normal;
+                  padding: 13px 30px;
+                  text-align: left;
+                  width: 100%;
+                  max-width: 600px;
+                  align-items: center;
+                  justify-content: center;
+            }
+
+            .logo {
+                  height: 36px;
+                  width: 166px;
+                  margin-bottom: 18px;
+            }
+
+            .hide {
+                  display: none;
+            }
+
+            .name {
+                  color: #0E5DA0;
+                  font-weight: 900;
+                  font-size: 32px;
+                  margin: 0;
+            }
+
+            .content-description {
+                  margin: 0;
+                  font-weight: 600;
+                  font-size: 16px;
+            }
+
+            .text-blue {
+                  color: #0E5DA0;
+            }
+
+            .text-grey {
+                  color: #9A9A9A;
+            }
+
+            .payment-information {
+                  margin: 12px 0px;
+                  background-color: #F5F5F5;
+                  border-radius: 15px;
+                  padding: 20px 9px;
+            }
+
+            .payment-information>p {
+                  margin: 0;
+                  font-size: 15px;
+                  font-weight: lighter;
+                  display: flex;
+                  justify-content: space-between;
+            }
+
+            .products>h2 {
+                  margin-bottom: 30px;
+            }
+
+            .products>.product-item {
+                  border: 1px solid #B2B2B2;
+                  width: 100%;
+                  height: 205px;
+                  border-radius: 15px;
+                  padding: 16px;
+                  box-sizing: border-box;
+                  margin-bottom: 16px;
+            }
+
+            .products>.product-item>img {
+                  width: 100px;
+                  height: 100px;
+                  border-radius: 15px;
+                  object-fit: cover;
+                  float: left;
+                  margin-right: 16px;
+                  margin-bottom: 16px;
+            }
+
+            .products>.product-item>div {
+                  display: flexbox;
+                  flex-direction: column;
+                  justify-content: center;
+                  box-sizing: border-box;
+                  font-size: 16px;
+            }
+
+            .products>.product-item>div>p {
+                  margin: 0;
+                  overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  -webkit-box-orient: vertical;
+            }
+
+            .products>.product-item>div>.price-quantity {
+                  clear: left;
+                  display: flex;
+                  justify-content: space-between;
+            }
+
+            .products>.product-item>div>.price-quantity>.quantity {
+                  width: 25%;
+                  min-width: 150px;
+                  border: 1px solid #0041CC;
+                  padding: 10px;
+                  border-radius: 10px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+            }
+
+            .products>.product-item>div>.price-quantity>.price {
+                  margin: 0;
+                  display: block;
+            }
+
+            .products>.product-item>div>.price-quantity>.price>p {
+                  margin: 0;
+            }
+
+            .products>.product-item>div>.price-quantity>.price>p>span {
+                  font-size: 12px;
+                  font-weight: bold;
+                  background-color: #E50000;
+                  padding: 4px;
+                  color: white;
+                  margin-right: 4px;
+            }
+
+            .products>.product-item>div>.price-quantity>.price>h1 {
+                  margin: 0;
+                  font-size: 20px;
+            }
+
+            .detail-order {
+                  margin: 12px 0px;
+            }
+
+            .detail-order p {
+                  margin: 0;
+                  font-size: 16px;
+                  font-weight: lighter;
+                  display: flex;
+                  justify-content: space-between;
+            }
+
+            .shipping-address>div * {
+                  margin: 0;
+            }
+
+            .footer {
+                  font-size: 12px;
+                  text-align: center;
+                  margin-top: 30px;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="container">
+            <div class="logo">
+                  <img src="{logo}" alt="logo">
+            </div>
+            <h1 class="name">Hi, {nameCustomer}</h1>
+            <p class="content-description">Pesanan dengan nomor <strong class="text-blue">{orderNumber}</strong> telah
+                  dibuat. Segera lakukan pembayaran dengan
+                  <strong class="text-blue">{paymentMethod} {paymentCode}</strong> sebelum <strong
+                        class="text-blue">{paymentDueDate}</strong>.
+            </p>
+            <p>Segera lakukan pembayaran pesananmu dengan detil sebagai berikut: </p>
+            <!-- {componentPaymentInformation} -->
+            <div class="payment-information">
+                  <p>
+                        <span>{paymentLabel}</span>
+                        <strong class="{textBlue}">{paymentValue}</strong>
+                  </p>
+            </div>
+            <!-- {componentHowToPay} -->
+            <div class="how-to-pay">
+                  <h2>Tata Cara Pembayaran</h2>
+                  <div class="payment-method">
+                        <p><span>&#9654; </span><strong>{paymentMethodChannel}</strong></p>
+                        <ol>
+                              <li>
+                                    {paymentMethodStepValue}
+                              </li>
+                        </ol>
+                  </div>
+            </div>
+            <hr />
+            <!-- {componentProducts} -->
+            <div class="products">
+                  <h2>Rincian Pesanan</h2>
+                  <div class="product-item">
+                        <img src="{productImage}" alt="astraotoshop.com">
+                        <div>
+                              <p>{productName}</p>
+                              <div class="price-quantity">
+                                    <div class="quantity text-blue">Jumlah : {qty}</div>
+                                    <div class="price">
+                                          <p class="{hide}"><span>{discountPercentage}</span><del
+                                                      class="text-grey">{priceDiscount}</del>
+                                          </p>
+                                          <h1>{price}</h1>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <hr />
+            <!-- {componentDetailOrder} -->
+            <div class="detail-order">
+                  <h2>Rincian Pesanan</h2>
+                  <div class="fee">
+                        <p>
+                              <span>{feeLabel}</span>
+                              <strong>{feeValue}</strong>
+                        </p>
+                  </div>
+                  <hr />
+                  <p>
+                        <strong>Grand Total</strong>
+                        <strong>{grandTotal}</strong>
+                  </p>
+            </div>
+            <!-- {componentShippingAddress} -->
+            <div class="shipping-address">
+                  <h3>Alamat Pengiriman</h3>
+                  <div>
+                        <h4>{customerName}</h4>
+                        <p>{customerAddress}</p>
+                        <p>{customerPhoneNumber}</p>
+                  </div>
+            </div>
+            <!-- {componentFooter} -->
+            <div class="footer">
+                  <p>E-mail ini dibuat otomatis, mohon untuk tidak membalas. Jika butuh bantuan, silakahkan hubungi
+                        <strong class="text-blue"><a href="{urlWhatsApp}" target="_blank">Customer Service
+                                    kami</a></strong>.
+                  </p>
+            </div>
+      </div>
+</body>
+
+</html>

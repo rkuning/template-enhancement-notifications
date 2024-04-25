@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Checkout Success</title>
+      <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+      <style>
+            body {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+            }
+
+            hr {
+                  border: 1px solid #BCBCBC;
+                  margin: 24px 0px;
+            }
+
+            .container {
+                  background-color: white;
+                  font-family: 'Poppins', 'sans-serif' !important;
+                  font-size: 14px;
+                  font-weight: normal;
+                  padding: 13px 30px;
+                  text-align: left;
+                  width: 100%;
+                  max-width: 600px;
+                  align-items: center;
+                  justify-content: center;
+            }
+
+            .logo {
+                  height: 36px;
+                  width: 166px;
+                  margin-bottom: 18px;
+            }
+
+            .name {
+                  color: #0E5DA0;
+                  font-weight: 900;
+                  font-size: 32px;
+                  margin: 0;
+            }
+
+            .content-description {
+                  margin: 0;
+                  font-weight: 600;
+                  font-size: 16px;
+            }
+
+            .text-blue {
+                  color: #0E5DA0;
+            }
+
+            .text-grey {
+                  color: #9A9A9A;
+            }
+
+            .payment-information {
+                  margin: 12px 0px;
+                  background-color: #F5F5F5;
+                  border-radius: 15px;
+                  padding: 20px 9px;
+            }
+
+            .payment-information>p {
+                  margin: 0;
+                  font-size: 15px;
+                  font-weight: lighter;
+                  display: flex;
+                  justify-content: space-between;
+            }
+
+            .orders>h2 {
+                  margin-bottom: 30px;
+            }
+
+            .orders>.order-item {
+                  border: 1px solid #B2B2B2;
+                  width: 100%;
+                  height: 205px;
+                  border-radius: 15px;
+                  padding: 16px;
+                  box-sizing: border-box;
+                  margin-bottom: 16px;
+            }
+
+            .orders>.order-item>img {
+                  width: 100px;
+                  height: 100px;
+                  border-radius: 15px;
+                  object-fit: cover;
+                  float: left;
+                  margin-right: 16px;
+                  margin-bottom: 16px;
+            }
+
+            .orders>.order-item>div {
+                  display: flexbox;
+                  flex-direction: column;
+                  justify-content: center;
+                  box-sizing: border-box;
+                  font-size: 16px;
+            }
+
+            .orders>.order-item>div>h3 {
+                  font-size: 16px;
+                  margin: 0;
+            }
+
+            .orders>.order-item>div>p {
+                  margin: 0;
+                  overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+            }
+
+            .orders>.order-item>div>.price-quantity {
+                  clear: left;
+                  display: flex;
+                  justify-content: space-between;
+            }
+
+            .orders>.order-item>div>.price-quantity>.quantity {
+                  width: 25%;
+                  min-width: 150px;
+                  border: 1px solid #0041CC;
+                  padding: 10px;
+                  border-radius: 10px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+            }
+
+            .orders>.order-item>div>.price-quantity>.price {
+                  margin: 0;
+                  display: block;
+            }
+
+            .orders>.order-item>div>.price-quantity>.price>p {
+                  margin: 0;
+            }
+
+            .orders>.order-item>div>.price-quantity>.price>p>span {
+                  font-size: 12px;
+                  font-weight: bold;
+                  background-color: #E50000;
+                  padding: 4px;
+                  color: white;
+                  margin-right: 4px;
+            }
+
+            .orders>.order-item>div>.price-quantity>.price>h1 {
+                  margin: 0;
+                  font-size: 20px;
+            }
+
+            .detail-order {
+                  margin: 12px 0px;
+            }
+
+            .detail-order p {
+                  margin: 0;
+                  font-size: 16px;
+                  font-weight: lighter;
+                  display: flex;
+                  justify-content: space-between;
+            }
+
+            .shipping-address > div * {
+                  margin: 0;
+            }
+
+            .footer {
+                  font-size: 12px;
+                  text-align: center;
+                  margin-top: 30px;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="container">
+            <div class="logo">
+                  <img src="{logo}" alt="logo">
+            </div>
+            <h1 class="name">Hi, {nameCustomer}</h1>
+            <p class="content-description">Pesanan dengan nomor <strong
+                        class="text-blue">{orderNumber}</strong> telah dibuat. Segera lakukan pembayaran dengan 
+                  <strong class="text-blue">{paymentMethod} {paymentCode}</strong> sebelum <strong
+                        class="text-blue">{paymentDueDate}</strong>.
+            </p>
+            <p>Segera lakukan pembayaran pesananmu dengan detil sebagai berikut: </p>
+            <!-- componentPaymentInformation -->
+            <div class="payment-information">
+                  <!-- componentPaymentInformationItem -->
+                  <p>
+                        <span>{paymentLabel}</span>
+                        <strong class="{textBlue}">{paymentValue}</strong>
+                  </p>
+            </div>
+            <!-- componentHowToPay -->
+            <div class="how-to-pay">
+                  <h2>Tata Cara Pembayaran</h2>
+                  <!-- componentPaymentMethod -->
+                  <div class="payment-method">
+                        <p><span>&#9654; </span><strong>{paymentMethodChannel}</strong></p>
+                        <ol>
+                              <!-- componentPaymentMethodStep -->
+                              <li>
+                                    {paymentMethodStepValue}
+                              </li>
+                              <li>
+                                    Pilih menu Transaksi Lain > Pembayaran > Lainnya > BRIVA
+                              </li>
+                              <li>
+                                    Masukkan kode pembayaran / virtual account number anda : 1236260012019420
+                              </li>
+                              <li>
+                                    Di halaman konfirmasi, pastikan detil pembayaran sudah sesuai seperti Nomor BRIVA,
+                                    Nama
+                                    Pelanggan dan Jumlah Pembayaran
+                              </li>
+                              <li>
+                                    Ikuti instruksi untuk menyelesaikan transaksi
+
+                              </li>
+                              <li>
+                                    Simpan struk transaksi sebagai bukti pembayaran
+
+                              </li>
+                        </ol>
+                  </div>
+            </div>
+            <hr />
+            <div class="orders">
+                  <h2>Rincian Pesanan</h2>
+                  <div class="order-item">
+                        <img src="./teko.jpg" alt="product">
+                        <div>
+                              <h3>Dengan Pemasangan</h3>
+                              <p>Aki Motor GS ASTRA MF GTZ-5S - Motor Honda Vario, Honda Beat, Honda Scoopy, Honda Revo,
+                                    Honda Supra X 125, Yamaha Mio, Yamaha Vixion</p>
+                              <div class="price-quantity">
+                                    <div class="quantity text-blue">Jumlah : 1</div>
+                                    <div class="price">
+                                          <p><span>20%</span><del class="text-grey">Rp. 100.000</del></p>
+                                          <h1>Rp. 80.000</h1>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="order-item">
+                        <img src="./teko.jpg" alt="product">
+                        <div>
+                              <h3>Dengan Pemasangan</h3>
+                              <p>Aki Motor GS ASTRA MF GTZ-5S - Motor Honda Vario, Honda Beat, Honda Scoopy, Honda Revo,
+                                    Honda Supra X 125, Yamaha Mio, Yamaha Vixion</p>
+                              <div class="price-quantity">
+                                    <div class="quantity text-blue">Jumlah : 1</div>
+                                    <div class="price">
+                                          <p><span>20%</span><del class="text-grey">Rp. 100.000</del></p>
+                                          <h1>Rp. 80.000</h1>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <hr />
+            <div class="detail-order">
+                  <h2>Rincian Pesanan</h2>
+                  <div class="fee-item">
+                        <p>
+                              <span>{feeLabel}</span>
+                              <strong>{feeValue}</strong>
+                        </p>
+                  </div>
+                  <hr />
+                  <p>
+                        <strong>Grand Total</strong>
+                        <strong>{grandTotal}</strong>
+                  </p>
+            </div>
+            <div class="shipping-address">
+                  <h3>Alamat Pengiriman</h3>
+                  <div>
+                        <h4>John Doe</h4>
+                        <p>Astra Otoparts Head Office, RT.1, Jl. Pegangsaan Dua KM.2,2, RW.3, Pegangsaan Dua Kelapa Gading, Kota Jakarta Utara DKI Jakarta, 14250</p>
+                        <p>02374923794273</p>
+                  </div>
+            </div>
+            <div class="footer">
+                  <p>E-mail ini dibuat otomatis, mohon untuk tidak membalas. Jika butuh bantuan, silakahkan hubungi <strong class="text-blue">Customer Service kami</strong>.</p>
+            </div>
+      </div>
+</body>
+
+</html>
