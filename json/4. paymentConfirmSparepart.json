@@ -1,0 +1,5 @@
+{
+  "title": "Success Payment",
+  "subject": "Pembayaran #{orderNumber} Sukses",
+  "content": "{componentBasePaymentConfirmSparepart}"
+}

@@ -1,0 +1,5 @@
+{
+  "title": "Reminder Payment",
+  "subject": "Selangkah Lagi untuk Mendapatkan Pesanan Kamu!",
+  "content": "{componentBaseReminderPayment6Hours}"
+}
