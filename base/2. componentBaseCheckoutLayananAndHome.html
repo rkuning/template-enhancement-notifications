@@ -11,7 +11,7 @@
 <body>
       <div class="container">
             <div class="logo"><img src="{logo}" alt="logo"></div>
-            <h1 class="name">Hi,{nameCustomer}</h1>
+            <h1 class="name">Hi{nameCustomer},</h1>
             <p class="content-description">Booking service dengan nomor pesanan <strong
                         class="text-blue">{orderNumber}</strong>telah dibuat. Segera lakukan pembayaran dengan <strong
                         class="text-blue">{paymentMethod}{paymentCode}</strong>sebelum <strong
@@ -19,7 +19,7 @@
             <p>Segera lakukan pembayaran pesananmu dengan detil sebagai berikut :</p>{componentPaymentInformation}
             {componentHowToPay}
             <hr />{componentProducts}
-            <hr />{componentDetailOrder} {componentShippingAddress} {componentFooter}
+            <hr />{componentDetailOrder}{componentShippingAddress}{componentFooter}
       </div>
 </body>
 
