@@ -12,7 +12,7 @@
 
       .container {
             background-color: white;
-            font-family: 'Poppins', 'sans-serif' !important;
+            font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
             font-size: 14px;
             font-weight: normal;
             padding: 13px 30px;
@@ -59,18 +59,9 @@
       }
 
       .payment-information {
-            margin: 12px 0px;
             background-color: #F5F5F5;
             border-radius: 15px;
             padding: 20px 9px;
-      }
-
-      .payment-information>p {
-            margin: 0;
-            font-size: 15px;
-            font-weight: lighter;
-            display: flex;
-            justify-content: space-between;
       }
 
       .products>h2 {
@@ -153,18 +144,47 @@
             font-size: 20px;
       }
 
+      .payment-information,
       .detail-order,
       .appointment {
             margin: 12px 0px;
       }
 
+      .payment-information p,
       .detail-order p,
       .appointment p {
             margin: 0;
             font-size: 16px;
             font-weight: lighter;
-            display: flex;
-            justify-content: space-between;
+            width: 100%;
+      }
+
+      .bold {
+            font-weight: bold;
+      }
+
+      .payment-information p span,
+      .payment-information p strong,
+      .appointment p span,
+      .appointment p strong,
+      .detail-order p span,
+      .detail-order p strong {
+            font-size: 15px;
+            display: inline-block;
+            width: 49%;
+            vertical-align: top;
+      }
+
+      .payment-information p span,
+      .appointment p span,
+      .detail-order p span {
+            text-align: left;
+      }
+
+      .payment-information p strong,
+      .appointment p strong,
+      .detail-order p strong {
+            text-align: right;
       }
 
       .shipping-address>div * {
