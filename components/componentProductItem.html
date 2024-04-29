@@ -1,13 +1,16 @@
-<div class="product-item">
-      <img src="{productImage}" alt="astraotoshop.com">
+<div class="product-item"><img src="{productImage}" alt="astraotoshop.com">
       <div>
             <p>{productName}</p>
             <div class="price-quantity">
-                  <div class="quantity text-blue">Jumlah : {qty}</div>
-                  <div class="price">
-                        <p class="{hide}"><span>{discountPercentage}</span><del class="text-grey">{priceDiscount}</del>
-                        </p>
-                        <h1>{price}</h1>
+                  <div style="width: 50%; float: left;">
+                        <div style="margin-right: auto;" class="quantity text-blue">Jumlah :{qty} </div>
+                  </div>
+                  <div style="width: 50%; float: right;">
+                        <div style="margin-left: auto;" class="price">
+                              <p class="{hide}"><span>{discountPercentage}</span><del
+                                          class="text-grey">{priceDiscount}</del></p>
+                              <h1>{price}</h1>
+                        </div>
                   </div>
             </div>
       </div>

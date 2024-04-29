@@ -20,7 +20,7 @@
 
             .container {
                   background-color: white;
-                  font-family: 'Poppins', 'sans-serif' !important;
+                  font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
                   font-size: 14px;
                   font-weight: normal;
                   padding: 13px 30px;
@@ -58,23 +58,18 @@
                   color: #0E5DA0;
             }
 
+            .text-red {
+                  color: #EE5757;
+            }
+
             .text-grey {
                   color: #9A9A9A;
             }
 
             .payment-information {
-                  margin: 12px 0px;
                   background-color: #F5F5F5;
                   border-radius: 15px;
                   padding: 20px 9px;
-            }
-
-            .payment-information>p {
-                  margin: 0;
-                  font-size: 15px;
-                  font-weight: lighter;
-                  display: flex;
-                  justify-content: space-between;
             }
 
             .products>h2 {
@@ -157,16 +152,47 @@
                   font-size: 20px;
             }
 
-            .detail-order {
+            .payment-information,
+            .detail-order,
+            .appointment {
                   margin: 12px 0px;
             }
 
-            .detail-order p {
+            .payment-information p,
+            .detail-order p,
+            .appointment p {
                   margin: 0;
                   font-size: 16px;
                   font-weight: lighter;
-                  display: flex;
-                  justify-content: space-between;
+                  width: 100%;
+            }
+
+            .bold {
+                  font-weight: bold;
+            }
+
+            .payment-information p span,
+            .payment-information p strong,
+            .appointment p span,
+            .appointment p strong,
+            .detail-order p span,
+            .detail-order p strong {
+                  font-size: 15px;
+                  display: inline-block;
+                  width: 49%;
+                  vertical-align: top;
+            }
+
+            .payment-information p span,
+            .appointment p span,
+            .detail-order p span {
+                  text-align: left;
+            }
+
+            .payment-information p strong,
+            .appointment p strong,
+            .detail-order p strong {
+                  text-align: right;
             }
 
             .shipping-address>div * {
@@ -177,6 +203,31 @@
                   font-size: 12px;
                   text-align: center;
                   margin-top: 30px;
+            }
+
+            .re-checkout {
+                  display: column;
+                  margin-top: 20px;
+                  margin-bottom: 50px;
+                  text-align: center;
+            }
+
+            .re-checkout a {
+                  text-decoration: none;
+                  background-color: #0041CC;
+                  color: white;
+                  border-radius: 10px;
+                  font-size: 18px;
+                  font-weight: bold;
+                  padding: 10px 15px;
+            }
+
+            .quote {
+                  font-weight: 900;
+                  font-size: 28px;
+                  margin: 80px;
+                  text-align: center;
+                  color: #0E5DA0;
             }
       </style>
 </head>
