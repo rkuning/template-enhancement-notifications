@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Pesanan #{orderNumber} Sukses</title>
+      <!-- {componentStyleCss} -->
+      <style>
+            body {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+            }
+
+            hr {
+                  border: 1px solid #BCBCBC;
+                  margin: 24px 0px;
+            }
+
+            .container {
+                  background-color: white;
+                  font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+                  font-size: 14px;
+                  font-weight: normal;
+                  padding: 13px 30px;
+                  text-align: left;
+                  width: 100%;
+                  max-width: 600px;
+                  align-items: center;
+                  justify-content: center;
+            }
+
+            .logo {
+                  height: 36px;
+                  width: 166px;
+                  margin-bottom: 18px;
+            }
+
+            .hide {
+                  display: none;
+            }
+
+            .im,
+            span.im,
+            p>span.im,
+            div>span.im {
+                  color: #000 !important;
+            }
+
+            .name {
+                  color: #0E5DA0;
+                  font-weight: 900;
+                  font-size: 32px;
+                  margin: 0;
+            }
+
+            .content-description {
+                  margin: 0;
+                  font-weight: 600;
+                  font-size: 16px;
+            }
+
+            .text-blue {
+                  color: #0E5DA0;
+            }
+
+            .text-red {
+                  color: #EE5757;
+            }
+
+            .text-grey {
+                  color: #9A9A9A;
+            }
+
+            .payment-information {
+                  background-color: #F5F5F5;
+                  border-radius: 15px;
+                  padding: 20px 9px;
+            }
+
+            .products>h2 {
+                  margin-bottom: 30px;
+            }
+
+            .products>.product-item {
+                  border: 1px solid #B2B2B2;
+                  width: 100%;
+                  height: 205px;
+                  border-radius: 15px;
+                  padding: 16px;
+                  box-sizing: border-box;
+                  margin-bottom: 16px;
+            }
+
+            .products>.product-item>img {
+                  width: 100px;
+                  height: 100px;
+                  border-radius: 15px;
+                  object-fit: cover;
+                  float: left;
+                  margin-right: 16px;
+                  margin-bottom: 16px;
+            }
+
+            .products>.product-item>div {
+                  display: flexbox;
+                  flex-direction: column;
+                  justify-content: center;
+                  box-sizing: border-box;
+                  font-size: 16px;
+            }
+
+            .products>.product-item>div>p {
+                  margin: 0;
+                  overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  -webkit-box-orient: vertical;
+            }
+
+            .products>.product-item>div>.price-quantity {
+                  clear: left;
+                  width: 100%;
+                  overflow: hidden;
+            }
+
+            .products>.product-item>div>.price-quantity>div>.quantity {
+                  width: 25%;
+                  min-width: 150px;
+                  border: 1px solid #0041CC;
+                  padding: 10px;
+                  border-radius: 10px;
+                  text-align: center;
+            }
+
+            .products>.product-item>div>.price-quantity>div>.price {
+                  /* margin: 0; */
+                  text-align: right;
+            }
+
+            .products>.product-item>div>.price-quantity>div>.price>p {
+                  margin: 0;
+            }
+
+            .products>.product-item>div>.price-quantity>div>.price>p>span {
+                  font-size: 12px;
+                  font-weight: bold;
+                  background-color: #E50000;
+                  padding: 4px;
+                  color: white;
+                  margin-right: 4px;
+            }
+
+            .products>.product-item>div>.price-quantity>div>.price>h1 {
+                  margin: 0;
+                  font-size: 20px;
+            }
+
+            .payment-information,
+            .detail-order,
+            .appointment {
+                  margin: 12px 0px;
+            }
+
+            .payment-information p,
+            .detail-order p,
+            .appointment p {
+                  margin: 0;
+                  font-size: 16px;
+                  font-weight: lighter;
+                  width: 100%;
+            }
+
+            .bold {
+                  font-weight: bold;
+            }
+
+            .payment-information p span,
+            .payment-information p strong,
+            .appointment p span,
+            .appointment p strong,
+            .detail-order p span,
+            .detail-order p strong {
+                  font-size: 15px;
+                  display: inline-block;
+                  width: 49%;
+                  vertical-align: top;
+            }
+
+            .payment-information p span,
+            .appointment p span,
+            .detail-order p span {
+                  text-align: left;
+            }
+
+            .payment-information p strong,
+            .appointment p strong,
+            .detail-order p strong {
+                  text-align: right;
+            }
+
+            .shipping-address>div * {
+                  margin: 0;
+            }
+
+            .footer {
+                  font-size: 12px;
+                  text-align: center;
+                  margin-top: 30px;
+            }
+
+            .footer p {
+                  margin: 0;
+                  font-size: 12px;
+            }
+
+            .re-checkout {
+                  display: column;
+                  margin-top: 20px;
+                  margin-bottom: 50px;
+                  text-align: center;
+            }
+
+            .re-checkout a {
+                  text-decoration: none;
+                  background-color: #0041CC;
+                  color: white;
+                  border-radius: 10px;
+                  font-size: 18px;
+                  font-weight: bold;
+                  padding: 10px 15px;
+            }
+
+            .quote {
+                  font-weight: 900;
+                  font-size: 28px;
+                  margin: 80px;
+                  text-align: center;
+                  color: #0E5DA0;
+            }
+
+            .footer-delivery {
+                  text-align: center;
+                  margin: 0 20%;
+            }
+
+            .footer-delivery h3 {
+                  margin: 20px 0;
+                  font-size: 16px;
+                  text-transform: uppercase;
+                  font-weight: bold;
+            }
+
+            .footer-delivery p {
+                  margin: 0;
+                  font-size: 12px;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="container">
+            <div class="logo">
+                  <img src="{logo}" alt="logo">
+            </div>
+            <h1 class="name">Hi {nameCustomer},</h1>
+            <p class="content-description">Pesanan dengan nomor order <strong class="text-blue">{orderNumber} </strong>
+                  telah diserahkan ke kurir
+                  pada <strong class="text-blue">{pickUpDate}</strong> dengan jasa pengiriman
+                  <strong class="text-blue">{courierNameCustomer}</strong> dan nomor Resi <strong
+                        class="text-blue">{shippingNumber}</strong>. Untuk melihat
+                  detail pengiriman produkmu klik
+                  <strong class="text-blue">'tombol'</strong> lacak
+                  pesanan pada menu transaksi.
+            </p>
+            <!-- {componentProducts} -->
+            <div class="products">
+                  <h2>Rincian Pesanan</h2>
+                  <div class="product-item">
+                        <img src="{productImage}" alt="astraotoshop.com">
+                        <div>
+                              <p>{productName}</p>
+                              <div class="price-quantity">
+                                    <div style="width: 50%; float: left;">
+                                          <div style="margin-right: auto;" class="quantity text-blue">Jumlah : {qty}
+                                          </div>
+                                    </div>
+                                    <div style="width: 50%; float: right;">
+                                          <div style="margin-left: auto;" class="price">
+                                                <p class="{hide}"><span>{discountPercentage}</span><del
+                                                            class="text-grey">{priceDiscount}</del>
+                                                </p>
+                                                <h1>{price}</h1>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <hr />
+            <!-- {componentDetailOrder} -->
+            <div class="detail-order">
+                  <h2>Rincian Pesanan</h2>
+                  <div class="fee">
+                        <p>
+                              <span>{feeLabel}</span>
+                              <strong>{feeValue}</strong>
+                        </p>
+                  </div>
+                  <hr />
+                  <p>
+                        <span class="bold">Grand Total</span>
+                        <strong>{grandTotal}</strong>
+                  </p>
+            </div>
+            <!-- {componentShippingAddress} -->
+            <div class="shipping-address">
+                  <h3>Alamat Pengiriman</h3>
+                  <div>
+                        <h4>{customerName}</h4>
+                        <p>{customerAddress}</p>
+                        <p>{customerPhoneNumber}</p>
+                  </div>
+            </div>
+            <!-- {componentFooterDelivery} -->
+            <div class="footer-delivery">
+                  <h3>Langkah Selanjutnya</h3>
+                  <p>Bagaimana jika barang yang diterima rusak/salah?
+                        Kamu bisa menghubungi <strong class="text-blue"><a rel="noreferrer noopener"
+                                    href="{urlWhatsApp}" target="_blank">Customer Service
+                                    kami</a></strong>. </p>
+            </div>
+      </div>
+</body>
+
+</html>
