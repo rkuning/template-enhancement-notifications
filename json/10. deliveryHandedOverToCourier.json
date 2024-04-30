@@ -1,1 +1,5 @@
-{ "title": "Order Pick Up", "subject": "Pesanan Diserahkan Ke Kurir", "content": "{componentDeliveryHandedOverToCourier}" }
+{
+  "title": "Order Pick Up",
+  "subject": "Pesanan Diserahkan Ke Kurir",
+  "content": "{componentBaseDeliveryHandedOverToCourier}"
+}

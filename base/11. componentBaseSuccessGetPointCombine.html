@@ -4,7 +4,7 @@
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Pesanan Diserahkan Ke Kurir</title>
+      <title>Terimakasih Sudah Berbelanja di Astra Otoshop</title>
       <!-- {componentStyleCss} -->
       <style>
             body {
@@ -135,7 +135,6 @@
             }
 
             .products>.product-item>div>.price-quantity>div>.price {
-                  /* margin: 0; */
                   text-align: right;
             }
 
@@ -211,7 +210,7 @@
             }
 
             .footer p {
-                  margin: 0;
+                  margin: 0 30px;
                   font-size: 12px;
             }
 
@@ -265,15 +264,16 @@
                   <img src="{logo}" alt="logo">
             </div>
             <h1 class="name">Hi {nameCustomer},</h1>
-            <p class="content-description">Pesanan dengan nomor order <strong class="text-blue">{orderNumber} </strong>
-                  telah diserahkan ke kurir
-                  pada <strong class="text-blue">{pickUpDate}</strong> dengan jasa pengiriman
-                  <strong class="text-blue">{courierNameCustomer}</strong> dan nomor Resi <strong
-                        class="text-blue">{shippingNumber}</strong>. Untuk melihat
-                  detail pengiriman produkmu klik
-                  <strong class="text-blue">'tombol'</strong> lacak
-                  pesanan pada menu transaksi.
+            <p class="content-description">Terima kasih sudah berbelanja di Astra Otoshop. Akun kamu telah mendapatkan
+                  point sebesar <strong class="text-blue">{getPoint}</strong> di akunmu.
             </p>
+            <!-- {componentPaymentInformation} -->
+            <div class="payment-information">
+                  <p>
+                        <span>{paymentLabel}</span>
+                        <strong class="{textBlue}">{paymentValue}</strong>
+                  </p>
+            </div>
             <!-- {componentProducts} -->
             <div class="products">
                   <h2>Rincian Pesanan</h2>
@@ -323,13 +323,18 @@
                         <p>{customerPhoneNumber}</p>
                   </div>
             </div>
-            <!-- {componentFooterDelivery} -->
-            <div class="footer-delivery">
-                  <h3>Langkah Selanjutnya</h3>
-                  <p>Bagaimana jika barang yang diterima rusak/salah?
-                        Kamu bisa menghubungi <strong class="text-blue"><a rel="noreferrer noopener"
-                                    href="{urlWhatsApp}" target="_blank">Customer Service
-                                    kami</a></strong>. </p>
+            <p style="margin: 30px; text-align: center; font-size: 14px; font-weight: bold;">Kamu bisa melihat kembali
+                  pesanan kamu di
+                  <strong class="text-blue"><a rel="noreferrer noopener" href="{urlOrderNumber}" target="_blank">Pesanan
+                              Saya</a></strong> di dalam akun Astra Otoshop.
+            </p>
+            <!-- {componentFooter} -->
+            <div class="footer">
+                  <p>E-mail ini dibuat otomatis, mohon untuk tidak membalas. Jika butuh bantuan, silakahkan hubungi
+                        <strong class="text-blue"><a rel="noreferrer noopener" href="{urlWhatsApp}"
+                                    target="_blank">Customer Service
+                                    kami</a></strong>.
+                  </p>
             </div>
       </div>
 </body>
