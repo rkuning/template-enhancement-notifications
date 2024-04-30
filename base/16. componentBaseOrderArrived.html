@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Pesanan Telah Sampai</title>{componentStyleCss}
+</head>
+
+<body>
+      <div class="container">
+            <div class="logo"><img src="{logo}" alt="logo"></div>
+            <h1 class="name">Hi{nameCustomer},</h1>
+            <p class="content-description"><strong class="text-blue" style="line-height: 2; font-weight: bolder;">Terima
+                        kasih telah berbelanja di AstraOtoshop.com</strong><br />Pesanan Anda dengan nomor order <strong
+                        class="text-blue">{orderNumber}</strong>telah sampai di alamat tujuan pada <strong
+                        class="text-blue">{deliveredDate}</strong>, dan terima oleh <strong
+                        class="text-blue">{deliveredToNameCustomer}</strong>. Pastikan kamu sudah melakukan pengecekan
+                  ke keluarga/lingkungan sekitar/satpam/resepsionis. </p>{componentProducts}
+            <hr />{componentDetailOrder} {componentShippingAddress} {componentFooterDelivery}
+      </div>
+</body>
+
+</html>
