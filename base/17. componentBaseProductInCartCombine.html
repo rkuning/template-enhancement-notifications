@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Ada produk dikeranjangmu !</title>
       <!-- {componentStyleCss} -->
-      <style>
+      <style type="text/css">
             body {
                   margin: 0;
                   padding: 0;
@@ -15,11 +15,16 @@
 
             a {
                   text-decoration: none;
+                  color: #0E5DA0;
             }
 
             hr {
                   border: 1px solid #BCBCBC;
                   margin: 24px 0px;
+            }
+
+            h2 {
+                  font-size: 21px;
             }
 
             .container {
@@ -30,7 +35,7 @@
                   padding: 13px 30px;
                   text-align: left;
                   width: 100%;
-                  max-width: 540px;
+                  max-width: 520px;
                   align-items: center;
                   justify-content: center;
             }
@@ -45,13 +50,6 @@
                   display: none;
             }
 
-            .im,
-            span.im,
-            p>span.im,
-            div>span.im {
-                  color: #000 !important;
-            }
-
             .name {
                   color: #0E5DA0;
                   font-weight: 900;
@@ -59,9 +57,15 @@
                   margin: 0;
             }
 
-            .content-description {
+            .content-description-top {
                   margin: 0;
+                  margin-top: 10px;
                   font-weight: 600;
+            }
+
+            .content-description-top,
+            .content-description-bottom {
+                  line-height: 1.4;
                   font-size: 16px;
             }
 
@@ -81,6 +85,10 @@
                   background-color: #F5F5F5;
                   border-radius: 15px;
                   padding: 20px 9px;
+            }
+
+            .payment-method {
+                  font-size: 14px;
             }
 
             .products>h2 {
@@ -131,7 +139,7 @@
 
             .products>.product-item>div>.price-quantity>div>.quantity {
                   width: 25%;
-                  min-width: 150px;
+                  min-width: 90px;
                   border: 1px solid #0041CC;
                   padding: 10px;
                   border-radius: 10px;
@@ -158,6 +166,7 @@
             .products>.product-item>div>.price-quantity>div>.price>h1 {
                   margin: 0;
                   font-size: 20px;
+                  ;
             }
 
             .payment-information,
@@ -268,74 +277,18 @@
                   <img src="{logo}" alt="logo">
             </div>
             <h1 class="name">Hi {nameCustomer},</h1>
-            <p class="content-description-top"><strong class="text-blue"
-                        style="line-height: 2; font-weight: bolder;">Terima
-                        kasih telah
-                        berbelanja di
-                        AstraOtoshop.com</strong><br />
-                  Pesanan Anda dengan nomor order <strong class="text-blue">{orderNumber}</strong> telah sampai di
-                  alamat tujuan pada <strong class="text-blue">{deliveredDate}</strong>, dan
-                  terima oleh <strong class="text-blue">{deliveredToNameCustomer}</strong>. Pastikan kamu sudah
-                  melakukan
-                  pengecekan ke keluarga/lingkungan
-                  sekitar/satpam/resepsionis.
+            <p class="content-description-top">{productName} masih nungguin kamu buat checkout di keranjang! <br />
+                  Jangan lupa segera lakukan pembayaran sebelum keduluan orang lain!
+                  <a rel="noreferrer noopener" href="{urlCheckoutPage}" target="_blank">
+                        Checkout Sekarang</a>.
             </p>
-            <!-- {componentProducts} -->
-            <div class="products">
-                  <h2>Rincian Pesanan</h2>
-                  <div class="product-item">
-                        <img src="{productImage}" alt="astraotoshop.com">
-                        <div>
-                              <p>{productName}</p>
-                              <div class="price-quantity">
-                                    <div style="width: 50%; float: left;">
-                                          <div style="margin-right: auto;" class="quantity text-blue">Jumlah : {qty}
-                                          </div>
-                                    </div>
-                                    <div style="width: 50%; float: right;">
-                                          <div style="margin-left: auto;" class="price">
-                                                <p class="{hide}"><span>{discountPercentage}</span><del
-                                                            class="text-grey">{priceDiscount}</del>
-                                                </p>
-                                                <h1>{price}</h1>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-            <hr />
-            <!-- {componentDetailOrder} -->
-            <div class="detail-order">
-                  <h2>Rincian Pesanan</h2>
-                  <div class="fee">
-                        <p>
-                              <span>{feeLabel}</span>
-                              <strong>{feeValue}</strong>
-                        </p>
-                  </div>
-                  <hr />
-                  <p>
-                        <span class="bold">Grand Total</span>
-                        <strong>{grandTotal}</strong>
+            <!-- {componentFooter} -->
+            <div class="footer">
+                  <p>E-mail ini dibuat otomatis, mohon untuk tidak membalas. Jika butuh bantuan, silakahkan hubungi
+                        <strong class="text-blue"><a rel="noreferrer noopener" href="{urlWhatsApp}"
+                                    target="_blank">Customer Service
+                                    kami</a></strong>.
                   </p>
-            </div>
-            <!-- {componentShippingAddress} -->
-            <div class="shipping-address">
-                  <h3>Alamat Pengiriman</h3>
-                  <div>
-                        <h4>{customerName}</h4>
-                        <p>{customerAddress}</p>
-                        <p>{customerPhoneNumber}</p>
-                  </div>
-            </div>
-            <!-- {componentFooterDelivery} -->
-            <div class="footer-delivery">
-                  <h3>Langkah Selanjutnya</h3>
-                  <p>Bagaimana jika barang yang diterima rusak/salah?
-                        Kamu bisa menghubungi <strong class="text-blue"><a rel="noreferrer noopener"
-                                    href="{urlWhatsApp}" target="_blank">Customer Service
-                                    kami</a></strong>. </p>
             </div>
       </div>
 </body>
