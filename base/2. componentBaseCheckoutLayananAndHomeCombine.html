@@ -13,6 +13,10 @@
                   box-sizing: border-box;
             }
 
+            a {
+                  text-decoration: none;
+            }
+
             hr {
                   border: 1px solid #BCBCBC;
                   margin: 24px 0px;
@@ -26,7 +30,7 @@
                   padding: 13px 30px;
                   text-align: left;
                   width: 100%;
-                  max-width: 600px;
+                  max-width: 540px;
                   align-items: center;
                   justify-content: center;
             }
@@ -135,7 +139,6 @@
             }
 
             .products>.product-item>div>.price-quantity>div>.price {
-                  /* margin: 0; */
                   text-align: right;
             }
 
@@ -210,6 +213,11 @@
                   margin-top: 30px;
             }
 
+            .footer p {
+                  margin: 0 30px;
+                  font-size: 12px;
+            }
+
             .re-checkout {
                   display: column;
                   margin-top: 20px;
@@ -234,6 +242,23 @@
                   text-align: center;
                   color: #0E5DA0;
             }
+
+            .footer-delivery {
+                  text-align: center;
+                  margin: 0 20%;
+            }
+
+            .footer-delivery h3 {
+                  margin: 20px 0;
+                  font-size: 16px;
+                  text-transform: uppercase;
+                  font-weight: bold;
+            }
+
+            .footer-delivery p {
+                  margin: 0;
+                  font-size: 12px;
+            }
       </style>
 </head>
 
@@ -243,13 +268,13 @@
                   <img src="{logo}" alt="logo">
             </div>
             <h1 class="name">Hi {nameCustomer},</h1>
-            <p class="content-description">Booking service dengan nomor pesanan <strong
+            <p class="content-description-top">Booking service dengan nomor pesanan <strong
                         class="text-blue">{orderNumber}</strong> telah
                   dibuat. Segera lakukan pembayaran dengan
                   <strong class="text-blue">{paymentMethod} {paymentCode}</strong> sebelum <strong
                         class="text-blue">{paymentDueDate}</strong>.
             </p>
-            <p>Segera lakukan pembayaran pesananmu dengan detil sebagai berikut :</p>
+            <p class="content-description-bottom">Segera lakukan pembayaran pesananmu dengan detil sebagai berikut :</p>
             <!-- {componentPaymentInformation} -->
             <div class="payment-information">
                   <p>

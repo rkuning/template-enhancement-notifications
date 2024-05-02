@@ -12,10 +12,11 @@
       <div class="container">
             <div class="logo"><img src="{logo}" alt="logo"></div>
             <h1 class="name">Hi {nameCustomer},</h1>
-            <p class="content-description">Pembayaran dengan nomor pesanan <strong
+            <p class="content-description-top">Pembayaran dengan nomor pesanan <strong
                         class="text-blue">{orderNumber}</strong> telah terverifikasi. Pesanan akan segera dikirimkan.
             </p>
-            <p>Terima kasih ya! Berikut detail pembayaranmu : </p>{componentPaymentInformation} {componentProducts}
+            <p class="content-description-bottom">Terima kasih ya! Berikut detail pembayaranmu : </p>
+            {componentPaymentInformation} {componentProducts}
             <hr />{componentDetailOrder} {componentShippingAddress} {componentFooter}
       </div>
 </body>

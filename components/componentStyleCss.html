@@ -14,6 +14,10 @@
             margin: 24px 0px;
       }
 
+      h2 {
+            font-size: calc(18px + (21 - 18) * ((100vw - 320px) / (1400 - 320)));
+      }
+
       .container {
             background-color: white;
             font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
@@ -22,7 +26,7 @@
             padding: 13px 30px;
             text-align: left;
             width: 100%;
-            max-width: 600px;
+            max-width: 540px;
             align-items: center;
             justify-content: center;
       }
@@ -47,14 +51,20 @@
       .name {
             color: #0E5DA0;
             font-weight: 900;
-            font-size: 32px;
+            font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1400 - 320)));
             margin: 0;
       }
 
-      .content-description {
+      .content-description-top {
             margin: 0;
+            margin-top: 10px;
             font-weight: 600;
-            font-size: 16px;
+      }
+
+      .content-description-top,
+      .content-description-bottom {
+            line-height: 1.4;
+            font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1400 - 320)));
       }
 
       .text-blue {
@@ -73,6 +83,10 @@
             background-color: #F5F5F5;
             border-radius: 15px;
             padding: 20px 9px;
+      }
+
+      .payment-method {
+            font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1400 - 320)));
       }
 
       .products>h2 {
@@ -104,7 +118,7 @@
             flex-direction: column;
             justify-content: center;
             box-sizing: border-box;
-            font-size: 16px;
+            font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1400 - 320)));
       }
 
       .products>.product-item>div>p {
@@ -123,7 +137,7 @@
 
       .products>.product-item>div>.price-quantity>div>.quantity {
             width: 25%;
-            min-width: 150px;
+            min-width: calc(90px + (150 - 90) * ((100vw - 320px) / (1400 - 320)));
             border: 1px solid #0041CC;
             padding: 10px;
             border-radius: 10px;
@@ -139,7 +153,7 @@
       }
 
       .products>.product-item>div>.price-quantity>div>.price>p>span {
-            font-size: 12px;
+            font-size: calc(11px + (12 - 11) * ((100vw - 320px) / (1400 - 320)));
             font-weight: bold;
             background-color: #E50000;
             padding: 4px;
@@ -149,7 +163,9 @@
 
       .products>.product-item>div>.price-quantity>div>.price>h1 {
             margin: 0;
-            font-size: 20px;
+            font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1400 - 320)));
+            ;
+
       }
 
       .payment-information,
@@ -162,7 +178,7 @@
       .detail-order p,
       .appointment p {
             margin: 0;
-            font-size: 16px;
+            font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1400 - 320)));
             font-weight: lighter;
             width: 100%;
       }
@@ -177,7 +193,7 @@
       .appointment p strong,
       .detail-order p span,
       .detail-order p strong {
-            font-size: 15px;
+            font-size: calc(14px + (15 - 14) * ((100vw - 320px) / (1400 - 320)));
             display: inline-block;
             width: 49%;
             vertical-align: top;

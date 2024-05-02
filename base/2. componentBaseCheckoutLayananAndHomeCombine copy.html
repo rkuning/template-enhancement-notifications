@@ -13,20 +13,28 @@
                   box-sizing: border-box;
             }
 
+            a {
+                  text-decoration: none;
+            }
+
             hr {
                   border: 1px solid #BCBCBC;
                   margin: 24px 0px;
             }
 
+            h2 {
+                  font-size: calc(18px + (21 - 18) * ((100vw - 320px) / (1400 - 320)));
+            }
+
             .container {
                   background-color: white;
-                  font-family: 'Poppins', 'sans-serif' !important;
+                  font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
                   font-size: 14px;
                   font-weight: normal;
                   padding: 13px 30px;
                   text-align: left;
                   width: 100%;
-                  max-width: 600px;
+                  max-width: 540px;
                   align-items: center;
                   justify-content: center;
             }
@@ -41,21 +49,38 @@
                   display: none;
             }
 
+            .im,
+            span.im,
+            p>span.im,
+            div>span.im {
+                  color: #000 !important;
+            }
+
             .name {
                   color: #0E5DA0;
                   font-weight: 900;
-                  font-size: 32px;
+                  font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1400 - 320)));
                   margin: 0;
             }
 
-            .content-description {
+            .content-description-top {
                   margin: 0;
+                  margin-top: 10px;
                   font-weight: 600;
-                  font-size: 16px;
+            }
+
+            .content-description-top,
+            .content-description-bottom {
+                  line-height: 1.4;
+                  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1400 - 320)));
             }
 
             .text-blue {
                   color: #0E5DA0;
+            }
+
+            .text-red {
+                  color: #EE5757;
             }
 
             .text-grey {
@@ -63,18 +88,13 @@
             }
 
             .payment-information {
-                  margin: 12px 0px;
                   background-color: #F5F5F5;
                   border-radius: 15px;
                   padding: 20px 9px;
             }
 
-            .payment-information>p {
-                  margin: 0;
-                  font-size: 15px;
-                  font-weight: lighter;
-                  display: flex;
-                  justify-content: space-between;
+            .payment-method {
+                  font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1400 - 320)));
             }
 
             .products>h2 {
@@ -106,7 +126,7 @@
                   flex-direction: column;
                   justify-content: center;
                   box-sizing: border-box;
-                  font-size: 16px;
+                  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1400 - 320)));
             }
 
             .products>.product-item>div>p {
@@ -119,32 +139,29 @@
 
             .products>.product-item>div>.price-quantity {
                   clear: left;
-                  display: flex;
-                  justify-content: space-between;
+                  width: 100%;
+                  overflow: hidden;
             }
 
-            .products>.product-item>div>.price-quantity>.quantity {
+            .products>.product-item>div>.price-quantity>div>.quantity {
                   width: 25%;
-                  min-width: 150px;
+                  min-width: calc(90px + (150 - 90) * ((100vw - 320px) / (1400 - 320)));
                   border: 1px solid #0041CC;
                   padding: 10px;
                   border-radius: 10px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
+                  text-align: center;
             }
 
-            .products>.product-item>div>.price-quantity>.price {
-                  margin: 0;
-                  display: block;
+            .products>.product-item>div>.price-quantity>div>.price {
+                  text-align: right;
             }
 
-            .products>.product-item>div>.price-quantity>.price>p {
+            .products>.product-item>div>.price-quantity>div>.price>p {
                   margin: 0;
             }
 
-            .products>.product-item>div>.price-quantity>.price>p>span {
-                  font-size: 12px;
+            .products>.product-item>div>.price-quantity>div>.price>p>span {
+                  font-size: calc(11px + (12 - 11) * ((100vw - 320px) / (1400 - 320)));
                   font-weight: bold;
                   background-color: #E50000;
                   padding: 4px;
@@ -152,21 +169,54 @@
                   margin-right: 4px;
             }
 
-            .products>.product-item>div>.price-quantity>.price>h1 {
+            .products>.product-item>div>.price-quantity>div>.price>h1 {
                   margin: 0;
-                  font-size: 20px;
+                  font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1400 - 320)));
+                  ;
+
             }
 
-            .detail-order {
+            .payment-information,
+            .detail-order,
+            .appointment {
                   margin: 12px 0px;
             }
 
-            .detail-order p {
+            .payment-information p,
+            .detail-order p,
+            .appointment p {
                   margin: 0;
-                  font-size: 16px;
+                  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1400 - 320)));
                   font-weight: lighter;
-                  display: flex;
-                  justify-content: space-between;
+                  width: 100%;
+            }
+
+            .bold {
+                  font-weight: bold;
+            }
+
+            .payment-information p span,
+            .payment-information p strong,
+            .appointment p span,
+            .appointment p strong,
+            .detail-order p span,
+            .detail-order p strong {
+                  font-size: calc(14px + (15 - 14) * ((100vw - 320px) / (1400 - 320)));
+                  display: inline-block;
+                  width: 49%;
+                  vertical-align: top;
+            }
+
+            .payment-information p span,
+            .appointment p span,
+            .detail-order p span {
+                  text-align: left;
+            }
+
+            .payment-information p strong,
+            .appointment p strong,
+            .detail-order p strong {
+                  text-align: right;
             }
 
             .shipping-address>div * {
@@ -178,6 +228,53 @@
                   text-align: center;
                   margin-top: 30px;
             }
+
+            .footer p {
+                  margin: 0 30px;
+                  font-size: 12px;
+            }
+
+            .re-checkout {
+                  display: column;
+                  margin-top: 20px;
+                  margin-bottom: 50px;
+                  text-align: center;
+            }
+
+            .re-checkout a {
+                  text-decoration: none;
+                  background-color: #0041CC;
+                  color: white;
+                  border-radius: 10px;
+                  font-size: 18px;
+                  font-weight: bold;
+                  padding: 10px 15px;
+            }
+
+            .quote {
+                  font-weight: 900;
+                  font-size: 28px;
+                  margin: 80px;
+                  text-align: center;
+                  color: #0E5DA0;
+            }
+
+            .footer-delivery {
+                  text-align: center;
+                  margin: 0 20%;
+            }
+
+            .footer-delivery h3 {
+                  margin: 20px 0;
+                  font-size: 16px;
+                  text-transform: uppercase;
+                  font-weight: bold;
+            }
+
+            .footer-delivery p {
+                  margin: 0;
+                  font-size: 12px;
+            }
       </style>
 </head>
 
@@ -187,13 +284,13 @@
                   <img src="{logo}" alt="logo">
             </div>
             <h1 class="name">Hi {nameCustomer},</h1>
-            <p class="content-description-top">Pesanan dengan nomor <strong class="text-blue">{orderNumber}</strong>
-                  telah
+            <p class="content-description-top">Booking service dengan nomor pesanan <strong
+                        class="text-blue">{orderNumber}</strong> telah
                   dibuat. Segera lakukan pembayaran dengan
                   <strong class="text-blue">{paymentMethod} {paymentCode}</strong> sebelum <strong
                         class="text-blue">{paymentDueDate}</strong>.
             </p>
-            <p class="content-description-bottom">Segera lakukan pembayaran pesananmu dengan detil sebagai berikut: </p>
+            <p class="content-description-bottom">Segera lakukan pembayaran pesananmu dengan detil sebagai berikut :</p>
             <!-- {componentPaymentInformation} -->
             <div class="payment-information">
                   <p>
@@ -222,12 +319,17 @@
                         <div>
                               <p>{productName}</p>
                               <div class="price-quantity">
-                                    <div class="quantity text-blue">Jumlah : {qty}</div>
-                                    <div class="price">
-                                          <p class="{hide}"><span>{discountPercentage}</span><del
-                                                      class="text-grey">{priceDiscount}</del>
-                                          </p>
-                                          <h1>{price}</h1>
+                                    <div style="width: 50%; float: left;">
+                                          <div style="margin-right: auto;" class="quantity text-blue">Jumlah : {qty}
+                                          </div>
+                                    </div>
+                                    <div style="width: 50%; float: right;">
+                                          <div style="margin-left: auto;" class="price">
+                                                <p class="{hide}"><span>{discountPercentage}</span><del
+                                                            class="text-grey">{priceDiscount}</del>
+                                                </p>
+                                                <h1>{price}</h1>
+                                          </div>
                                     </div>
                               </div>
                         </div>
@@ -245,7 +347,7 @@
                   </div>
                   <hr />
                   <p>
-                        <strong>Grand Total</strong>
+                        <span class="bold">Grand Total</span>
                         <strong>{grandTotal}</strong>
                   </p>
             </div>
