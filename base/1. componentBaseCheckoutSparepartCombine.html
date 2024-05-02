@@ -6,16 +6,24 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Pesanan #{orderNumber} Sukses</title>
       <!-- {componentStyleCss} -->
-      <style>
+      <style type="text/css">
             body {
                   margin: 0;
                   padding: 0;
                   box-sizing: border-box;
             }
 
+            a {
+                  text-decoration: none;
+            }
+
             hr {
                   border: 1px solid #BCBCBC;
                   margin: 24px 0px;
+            }
+
+            h2 {
+                  font-size: 21px;
             }
 
             .container {
@@ -26,7 +34,7 @@
                   padding: 13px 30px;
                   text-align: left;
                   width: 100%;
-                  max-width: 600px;
+                  max-width: 540px;
                   align-items: center;
                   justify-content: center;
             }
@@ -41,6 +49,13 @@
                   display: none;
             }
 
+            .im,
+            span.im,
+            p>span.im,
+            div>span.im {
+                  color: #000 !important;
+            }
+
             .name {
                   color: #0E5DA0;
                   font-weight: 900;
@@ -48,9 +63,15 @@
                   margin: 0;
             }
 
-            .content-description {
+            .content-description-top {
                   margin: 0;
+                  margin-top: 10px;
                   font-weight: 600;
+            }
+
+            .content-description-top,
+            .content-description-bottom {
+                  line-height: 1.4;
                   font-size: 16px;
             }
 
@@ -70,6 +91,10 @@
                   background-color: #F5F5F5;
                   border-radius: 15px;
                   padding: 20px 9px;
+            }
+
+            .payment-method {
+                  font-size: 14px;
             }
 
             .products>h2 {
@@ -114,31 +139,28 @@
 
             .products>.product-item>div>.price-quantity {
                   clear: left;
-                  display: flex;
-                  justify-content: space-between;
+                  width: 100%;
+                  overflow: hidden;
             }
 
-            .products>.product-item>div>.price-quantity>.quantity {
+            .products>.product-item>div>.price-quantity>div>.quantity {
                   width: 25%;
-                  min-width: 150px;
+                  min-width: 90px;
                   border: 1px solid #0041CC;
                   padding: 10px;
                   border-radius: 10px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
+                  text-align: center;
             }
 
-            .products>.product-item>div>.price-quantity>.price {
-                  margin: 0;
-                  display: block;
+            .products>.product-item>div>.price-quantity>div>.price {
+                  text-align: right;
             }
 
-            .products>.product-item>div>.price-quantity>.price>p {
+            .products>.product-item>div>.price-quantity>div>.price>p {
                   margin: 0;
             }
 
-            .products>.product-item>div>.price-quantity>.price>p>span {
+            .products>.product-item>div>.price-quantity>div>.price>p>span {
                   font-size: 12px;
                   font-weight: bold;
                   background-color: #E50000;
@@ -147,9 +169,10 @@
                   margin-right: 4px;
             }
 
-            .products>.product-item>div>.price-quantity>.price>h1 {
+            .products>.product-item>div>.price-quantity>div>.price>h1 {
                   margin: 0;
                   font-size: 20px;
+                  ;
             }
 
             .payment-information,
@@ -205,6 +228,11 @@
                   margin-top: 30px;
             }
 
+            .footer p {
+                  margin: 0 30px;
+                  font-size: 12px;
+            }
+
             .re-checkout {
                   display: column;
                   margin-top: 20px;
@@ -228,6 +256,23 @@
                   margin: 80px;
                   text-align: center;
                   color: #0E5DA0;
+            }
+
+            .footer-delivery {
+                  text-align: center;
+                  margin: 0 20%;
+            }
+
+            .footer-delivery h3 {
+                  margin: 20px 0;
+                  font-size: 16px;
+                  text-transform: uppercase;
+                  font-weight: bold;
+            }
+
+            .footer-delivery p {
+                  margin: 0;
+                  font-size: 12px;
             }
       </style>
 </head>
@@ -273,12 +318,17 @@
                         <div>
                               <p>{productName}</p>
                               <div class="price-quantity">
-                                    <div class="quantity text-blue">Jumlah : {qty}</div>
-                                    <div class="price">
-                                          <p class="{hide}"><span>{discountPercentage}</span><del
-                                                      class="text-grey">{priceDiscount}</del>
-                                          </p>
-                                          <h1>{price}</h1>
+                                    <div style="width: 50%; float: left;">
+                                          <div style="margin-right: auto;" class="quantity text-blue">Jumlah : {qty}
+                                          </div>
+                                    </div>
+                                    <div style="width: 50%; float: right;">
+                                          <div style="margin-left: auto;" class="price">
+                                                <p class="{hide}"><span>{discountPercentage}</span><del
+                                                            class="text-grey">{priceDiscount}</del>
+                                                </p>
+                                                <h1>{price}</h1>
+                                          </div>
                                     </div>
                               </div>
                         </div>

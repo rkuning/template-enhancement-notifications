@@ -4,20 +4,19 @@
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Pembayaran #{orderNumber} Sukses</title>
-      {componentStyleCss}
+      <title>Pembayaran #{orderNumber} Sukses</title>{componentStyleCss}
 </head>
 
 <body>
       <div class="container">
             <div class="logo"><img src="{logo}" alt="logo"></div>
-            <h1 class="name">Hi {nameCustomer},</h1>
+            <h1 class="name">Hi{nameCustomer},</h1>
             <p class="content-description-top">Pembayaran dengan nomor pesanan <strong
-                        class="text-blue">{orderNumber}</strong> telah terverifikasi. Pesanan akan segera dikirimkan.
+                        class="text-blue">{orderNumber}</strong>telah terverifikasi. Pesanan akan segera dikirimkan.
             </p>
             <p class="content-description-bottom">Terima kasih ya! Berikut detail pembayaranmu : </p>
-            {componentPaymentInformation} {componentProducts}
-            <hr />{componentDetailOrder} {componentShippingAddress} {componentFooter}
+            {componentPaymentInformation}{componentProducts}
+            <hr />{componentDetailOrder}{componentShippingAddress}{componentFooter}
       </div>
 </body>
 
