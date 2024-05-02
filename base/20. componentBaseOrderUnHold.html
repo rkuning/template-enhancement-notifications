@@ -4,16 +4,16 @@
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Pesanan di Hold</title>{componentStyleCss}
+      <title>Status Pesanan #{orderNumber} telah dikembalikan</title>{componentStyleCss}
 </head>
 
 <body>
       <div class="container">
             <div class="logo"><img src="{logo}" alt="logo"></div>
             <h1 class="name">Hi{nameCustomer},</h1>
-            <p class="content-description-top">Ada keterlambatan pengiriman pesanan Anda untuk nomor order <strong
-                        class="text-blue">{orderNumber}</strong>karena kami sedang melakukan verifikasi pembayaran Anda.
-            </p>{componentProducts}
+            <p class="content-description-top">Proses pengecekan pesanan Anda dengan nomor order <strong
+                        class="text-blue">{orderNumber}</strong>sudah selesai. Pembayaranmu sudah terkonfirmasi. </p>
+            {componentProducts}
             <hr />{componentDetailOrder} {componentShippingAddress} {componentFooterOrder}
       </div>
 </body>
