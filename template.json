@@ -1,5 +1,5 @@
 {
-  "title": "Success Checkout",
-  "subject": "Pesanan #{orderNumber} Sukses",
-  "content": ""
+  "title": "Used Point",
+  "subject": "Terimakasih Sudah Berbelanja di Astra Otoshop",
+  "content": "Hi{NameCustomer}<br>Anda menggunakan poin sebesar{usedPoint} sebagai potongan pembelian. Cek Riwayat pointmu sekarang."
 }
