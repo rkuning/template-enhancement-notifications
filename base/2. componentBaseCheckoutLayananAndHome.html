@@ -10,15 +10,15 @@
 <body>
       <div class="container">
             <div class="logo"><img src="{logo}" alt="logo"></div>
-            <h1 class="name">Hi{nameCustomer},</h1>
-            <p class="content-description-top" style="font-family: Poppins, sans-serif;">Booking service dengan nomor
-                  pesanan <strong class="text-blue">{orderNumber}</strong>telah dibuat. Segera lakukan pembayaran dengan
-                  <strong class="text-blue">{paymentMethod}{paymentCode}</strong>sebelum <strong
+            <h1 class="name">Hi {nameCustomer},</h1>
+            <p class="content-description-top">Booking service dengan nomor pesanan <strong
+                        class="text-blue">{orderNumber} </strong>telah dibuat. Segera lakukan pembayaran dengan <strong
+                        class="text-blue">{paymentMethod}{paymentCode} </strong>sebelum <strong
                         class="text-blue">{paymentDueDate}</strong>. </p>
             <p class="content-description-bottom">Segera lakukan pembayaran pesananmu dengan detil sebagai berikut :</p>
-            {componentPaymentInformation}{componentHowToPay}
+            {componentPaymentInformation} {componentHowToPay}
             <hr />{componentProducts}
-            <hr />{componentDetailOrder}{componentShippingAddress}{componentFooter}
+            <hr />{componentDetailOrder} {componentFooter}
       </div>
 </body>
 
