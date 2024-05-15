@@ -10,11 +10,11 @@
 <body>
       <div class="container">
             <div class="logo"><img src="{logo}" alt="logo"></div>
-            <h1 class="name">Hi{nameCustomer},</h1>
-            <p class="content-description-top">Status : <strong class="text-red">{orderState}</strong><br />Pesanan kamu
-                  sudah di depan mata. Segera lakukan pembayaran sebelum tagihan kamu kedaluwarsa. </p>
-            {componentPaymentInformation} {componentHowToPay} {componentProducts}
-            <hr />{componentDetailOrder} {componentShippingAddress} {componentFooter}
+            <h1 class="name">Hi {nameCustomer},</h1>
+            <p class="content-description-top">Status : <strong class="text-red">{orderState} </strong><br />Pesanan
+                  kamu sudah di depan mata. Segera lakukan pembayaran sebelum tagihan kamu kedaluwarsa. </p>
+            {componentPaymentInformation}{componentProducts}.
+            <hr />{componentDetailOrder}{componentHowToPay}{componentFooter}
       </div>
 </body>
 

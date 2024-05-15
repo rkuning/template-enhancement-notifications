@@ -10,15 +10,13 @@
 <body>
       <div class="container">
             <div class="logo"><img src="{logo}" alt="logo"></div>
-            <h1 class="name">Hi {nameCustomer},</h1>
+            <h1 class="name">Hi{nameCustomer},</h1>
             <p class="content-description-top">Pembayaran dengan nomor pesanan <strong class="text-blue">{orderNumber}
-                  </strong>telah terkonfirmasi. Kode Voucher Anda adalah <strong class="text-blue">{voucherCode}
-                  </strong>untuk jenis servis <strong class="text-blue">{serviceType} </strong>berlaku sampai dengan
-                  <strong class="text-blue">{expiredVoucherDate}</strong>.
-            </p>
+                  </strong>telah terkonfirmasi. Untuk melihat detil voucher Anda dapat dilihat di Rincian Servis di
+                  bawah. </p>
             <p class="content-description-bottom">Berikut detail pembayaran Anda: </p>{componentPaymentInformation}
             {componentProducts}.
-            <hr />{componentDetailOrder}{componentAppointment}{componentTermCondition}{componentFooter}
+            <hr />{componentDetailOrder}{componentAppointment}{componentFooter}
       </div>
 </body>
 

@@ -1,0 +1,5 @@
+{
+  "title": "Unhold Order",
+  "subject": "Status Pesanan #{orderNumber} telah dikembalikan",
+  "content": "{componentBaseOrderUnHoldVoucher}"
+}
