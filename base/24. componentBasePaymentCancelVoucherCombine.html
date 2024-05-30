@@ -4,7 +4,7 @@
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Sukses Mendapatkan Poin Member Baru Astraotoshop</title>
+      <title>Pesanan #{orderNumber} Dibatalkan</title>
       <!-- {componentStyleCss} -->
       <style type="text/css">
             html {
@@ -319,10 +319,55 @@
                   <img src="{logo}" alt="logo">
             </div>
             <h1 class="name">Hi {nameCustomer},</h1>
-            <p class="content-description-top">Selamat bergabung di Astra Otoshop. Sebagai member baru, Anda akan mendapatkan poin dan nikmati berbagai keuntungan menjadi member kami. Kumpulkan poin Anda segera!</p>
-            <div class="point">
-                  <p>Poin Anda sebesar</p>
-                  <h1 class="text-blue">{getPoint}</h1>
+            <p class="content-description-top">Pembayaran Anda dengan nomor order <strong
+                        class="text-blue">{orderNumber}</strong> melalui <strong
+                        class="text-blue">{paymentMethod}</strong> dibatalkan karena batas pembayaran pesanan
+                  telah habis. Harap tidak membayar pesanan ini.
+            </p>
+            <!-- {componentPaymentInformation} -->
+            <div class="payment-information">
+                  <p>
+                        <span>{paymentLabel}</span>
+                        <strong class="{textBlue}">{paymentValue}</strong>
+                  </p>
+            </div>
+            <div class="products">
+                  <h2>Rincian Pesanan</h2>
+                  <div class="product-item">
+                        <img src="{productImage}" alt="astraotoshop.com">
+                        <div>
+                              <p>{productName}</p>
+                              <div class="price-quantity">
+                                    <div class="quantity text-blue">Jumlah : {qty}</div>
+                                    <div class="price">
+                                          <p class="{hide}"><span>{discountPercentage}</span><del
+                                                      class="text-grey">{priceDiscount}</del>
+                                          </p>
+                                          <h1>{price}</h1>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <hr />
+            <!-- {componentDetailOrder} -->
+            <div class="detail-order">
+                  <h2>Rincian Pesanan</h2>
+                  <div class="fee">
+                        <p>
+                              <span>{feeLabel}</span>
+                              <strong>{feeValue}</strong>
+                        </p>
+                  </div>
+                  <hr />
+                  <p>
+                        <strong>Grand Total</strong>
+                        <strong>{grandTotal}</strong>
+                  </p>
+            </div>
+            <div class="re-checkout">
+                  <h3>Checkout ulang belanjaan Anda ?</h3>
+                  <a href="{urlOrderAgain}" target="_blank">Checkout ulang</a>
             </div>
             <!-- {componentFooter} -->
             <div class="footer">

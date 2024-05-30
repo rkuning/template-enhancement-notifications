@@ -1,0 +1,1 @@
+{ "title": "Cancel Order", "subject": "Pesanan #{orderNumber} Dibatalkan", "content": "{componentBasePaymentCancelVoucher}" }
