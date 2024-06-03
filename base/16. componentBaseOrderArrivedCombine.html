@@ -6,115 +6,126 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Pesanan Telah Sampai</title>
       <!-- {componentStyleCss} -->
-      <style>
+      <style type="text/css">
+            html {
+                  font-size: 16px;
+            }
+      
             body {
                   margin: 0;
                   padding: 0;
                   box-sizing: border-box;
             }
-
+      
             a {
                   text-decoration: none;
+                  color: #0E5DA0;
             }
-
+      
             hr {
-                  border: 1px solid #BCBCBC;
-                  margin: 24px 0px;
+                  border: 0.06rem solid #BCBCBC;
+                  margin: 1.5rem 0rem;
             }
-
+      
+            h2 {
+                  font-size: 1.35rem;
+            }
+      
             .container {
                   background-color: white;
                   font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
-                  font-size: 14px;
                   font-weight: normal;
-                  padding: 13px 30px;
+                  padding: 0.9rem 1.9rem;
                   text-align: left;
                   width: 100%;
-                  max-width: 600px;
                   align-items: center;
                   justify-content: center;
+                  box-sizing: border-box;
             }
-
+      
             .logo {
                   height: 36px;
                   width: 166px;
-                  margin-bottom: 18px;
+                  margin-bottom: 1.1rem;
             }
-
+      
             .hide {
                   display: none;
             }
-
-            .im,
-            span.im,
-            p>span.im,
-            div>span.im {
-                  color: #000 !important;
-            }
-
+      
             .name {
                   color: #0E5DA0;
                   font-weight: 900;
-                  font-size: 32px;
+                  font-size: 2rem;
                   margin: 0;
             }
-
-            .content-description {
+      
+            .content-description-top {
                   margin: 0;
+                  margin-top: 0.6rem;
                   font-weight: 600;
-                  font-size: 16px;
             }
-
+      
+            .content-description-top,
+            .content-description-bottom {
+                  line-height: 1.4;
+                  font-size: 1rem;
+            }
+      
             .text-blue {
                   color: #0E5DA0;
             }
-
+      
             .text-red {
                   color: #EE5757;
             }
-
+      
             .text-grey {
                   color: #9A9A9A;
             }
-
+      
             .payment-information {
                   background-color: #F5F5F5;
-                  border-radius: 15px;
-                  padding: 20px 9px;
+                  border-radius: 0.9rem;
+                  padding: 1.3rem 0.6rem;
+                  line-height: 1.4;
             }
-
+      
+            .payment-method {
+                  font-size: 0.9rem;
+            }
+      
             .products>h2 {
-                  margin-bottom: 30px;
+                  margin-bottom: 1.9rem;
             }
-
+      
             .products>.product-item {
                   border: 1px solid #B2B2B2;
                   width: 100%;
-                  height: 205px;
-                  border-radius: 15px;
-                  padding: 16px;
+                  border-radius: 0.9rem;
+                  padding: 1rem;
                   box-sizing: border-box;
-                  margin-bottom: 16px;
+                  margin-bottom: 1rem;
             }
-
+      
             .products>.product-item>img {
                   width: 100px;
                   height: 100px;
-                  border-radius: 15px;
+                  border-radius: 0.9rem;
                   object-fit: cover;
                   float: left;
-                  margin-right: 16px;
-                  margin-bottom: 16px;
+                  margin-right: 1rem;
+                  margin-bottom: 1rem;
             }
-
+      
             .products>.product-item>div {
                   display: flexbox;
                   flex-direction: column;
                   justify-content: center;
                   box-sizing: border-box;
-                  font-size: 16px;
+                  font-size: 1rem;
             }
-
+      
             .products>.product-item>div>p {
                   margin: 0;
                   overflow: hidden;
@@ -122,142 +133,182 @@
                   -webkit-line-clamp: 3;
                   -webkit-box-orient: vertical;
             }
-
+      
             .products>.product-item>div>.price-quantity {
                   clear: left;
                   width: 100%;
                   overflow: hidden;
             }
-
+      
             .products>.product-item>div>.price-quantity>div>.quantity {
                   width: 25%;
-                  min-width: 150px;
+                  min-width: 6rem;
                   border: 1px solid #0041CC;
-                  padding: 10px;
-                  border-radius: 10px;
+                  padding: 0.6rem;
+                  border-radius: 0.6rem;
                   text-align: center;
             }
-
+      
             .products>.product-item>div>.price-quantity>div>.price {
                   text-align: right;
             }
-
+      
             .products>.product-item>div>.price-quantity>div>.price>p {
                   margin: 0;
             }
-
+      
             .products>.product-item>div>.price-quantity>div>.price>p>span {
-                  font-size: 12px;
+                  font-size: 0.8rem;
                   font-weight: bold;
                   background-color: #E50000;
-                  padding: 4px;
+                  padding: 0.3rem;
                   color: white;
-                  margin-right: 4px;
+                  margin-right: 0.3rem;
             }
-
+      
             .products>.product-item>div>.price-quantity>div>.price>h1 {
                   margin: 0;
-                  font-size: 20px;
+                  font-size: 1.3rem;
+                  ;
             }
-
+      
             .payment-information,
             .detail-order,
             .appointment {
-                  margin: 12px 0px;
+                  margin: 0.8rem 0rem;
             }
-
+      
             .payment-information p,
             .detail-order p,
             .appointment p {
                   margin: 0;
-                  font-size: 16px;
+                  font-size: 1rem;
                   font-weight: lighter;
                   width: 100%;
             }
-
+      
             .bold {
                   font-weight: bold;
             }
-
+      
             .payment-information p span,
             .payment-information p strong,
             .appointment p span,
             .appointment p strong,
             .detail-order p span,
             .detail-order p strong {
-                  font-size: 15px;
+                  font-size: 0.9rem;
                   display: inline-block;
                   width: 49%;
                   vertical-align: top;
             }
-
+      
             .payment-information p span,
             .appointment p span,
             .detail-order p span {
                   text-align: left;
             }
-
+      
             .payment-information p strong,
             .appointment p strong,
             .detail-order p strong {
                   text-align: right;
             }
-
+      
             .shipping-address>div * {
                   margin: 0;
             }
-
+      
             .footer {
-                  font-size: 12px;
+                  font-size: 0.8rem;
                   text-align: center;
-                  margin-top: 30px;
+                  margin-top: 1.9rem;
             }
-
+      
             .footer p {
-                  margin: 0 30px;
-                  font-size: 12px;
+                  margin: 0 1.9rem;
+                  font-size: 0.8rem;
             }
-
+      
             .re-checkout {
                   display: column;
-                  margin-top: 20px;
-                  margin-bottom: 50px;
+                  margin-top: 1.3rem;
+                  margin-bottom: 3rem;
                   text-align: center;
             }
-
+      
             .re-checkout a {
                   text-decoration: none;
                   background-color: #0041CC;
                   color: white;
-                  border-radius: 10px;
+                  border-radius: 0.6rem;
                   font-size: 18px;
                   font-weight: bold;
-                  padding: 10px 15px;
+                  padding: 0.6rem 0.9rem;
             }
-
+      
             .quote {
                   font-weight: 900;
-                  font-size: 28px;
-                  margin: 80px;
+                  font-size: 1.8rem;
+                  margin: 5.6rem;
                   text-align: center;
                   color: #0E5DA0;
             }
-
+      
             .footer-delivery {
                   text-align: center;
                   margin: 0 20%;
             }
-
+      
             .footer-delivery h3 {
-                  margin: 20px 0;
-                  font-size: 16px;
+                  margin: 1.3rem 0;
+                  font-size: 1rem;
                   text-transform: uppercase;
                   font-weight: bold;
             }
-
+      
             .footer-delivery p {
                   margin: 0;
-                  font-size: 12px;
+                  font-size: 0.8rem;
+            }
+      
+            .point {
+                  text-align: center;
+                  background-color: #F5F5F5;
+                  border-radius: 0.9rem;
+                  padding: 0.6rem;
+                  margin: 0.9rem auto;
+            }
+      
+            .point p {
+                  margin: 0;
+                  font-size: 1rem;
+            }
+      
+            .point h1 {
+                  margin: 0.4rem;
+                  font-size: 2.2rem;
+                  font-weight: bolder;
+            }
+      
+            .expired {
+                  text-align: center;
+                  font-size: 0.9rem;
+                  line-height: 1.4;
+            }
+      
+            .voucher {
+                  padding-left: 50px;
+                  box-sizing: border-box;
+            }
+      
+            .voucher span {
+                  margin: 0;
+                  font-size: 0.75rem !important;
+            }
+      
+            .voucher a {
+                  font-size: 0.5rem;
             }
       </style>
 </head>
@@ -268,18 +319,8 @@
                   <img src="{logo}" alt="logo">
             </div>
             <h1 class="name">Hi {nameCustomer},</h1>
-            <p class="content-description-top"><strong class="text-blue"
-                        style="line-height: 2; font-weight: bolder;">Terima
-                        kasih telah
-                        berbelanja di
-                        AstraOtoshop.com</strong><br />
-                  Pesanan Anda dengan nomor order <strong class="text-blue">{orderNumber}</strong> telah sampai di
-                  alamat tujuan pada <strong class="text-blue">{deliveredDate}</strong>, dan
-                  terima oleh <strong class="text-blue">{deliveredToNameCustomer}</strong>. Pastikan kamu sudah
-                  melakukan
-                  pengecekan ke keluarga/lingkungan
-                  sekitar/satpam/resepsionis.
-            </p>
+            <p class="content-description-top" style="margin-top: 0; margin-bottom: 1.25rem;"><strong class="text-blue" style="line-height: 1; font-weight: bolder;">Terima kasih telah berbelanja di AstraOtoshop.com</strong></p>
+            <p class="content-description-top">Pesanan dengan nomor <strong class="text-blue">{orderNumber} </strong>dan nomor resi <strong class="text-blue">{shippingNumber} </strong>telah tiba di alamat tujuan pada <strong class="text-blue">{deliveredDate} </strong>dan diterima oleh <strong class="text-blue">{deliveredToNameCustomer}</strong>. Berikan ulasan apabila Anda puas dengan pesanan terkait.</p>
             <!-- {componentProducts} -->
             <div class="products">
                   <h2>Rincian Pesanan</h2>
