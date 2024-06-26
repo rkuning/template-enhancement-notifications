@@ -1,5 +1,1 @@
-{
-  "title": "Expired Point",
-  "subject": "Terimakasih Sudah Berbelanja di AstraOtoshop",
-  "content": "{componentBaseReminderPointExpired}"
-}
+{ "title": "Poin Astra Otoshop Anda Akan Kedaluwarsa", "subject": "Poin Astra Otoshop Anda Akan Kedaluwarsa", "content": "{componentBaseReminderPointExpired}" } 

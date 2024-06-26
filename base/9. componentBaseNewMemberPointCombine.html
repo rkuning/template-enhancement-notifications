@@ -5,331 +5,334 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Sukses Mendapatkan Poin Member Baru Astraotoshop</title>
-      <!-- {componentStyleCss} -->
       <style type="text/css">
             html {
-                  font-size: 16px;
+                font-size: 16px;
             }
-      
+        
             body {
-                  margin: 0;
-                  padding: 0;
-                  box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
-      
+        
             a {
-                  text-decoration: none;
-                  color: #0E5DA0;
+                text-decoration: none;
+                color: #0E5DA0;
             }
-      
+        
             hr {
-                  border: 0.06rem solid #BCBCBC;
-                  margin: 1.5rem 0rem;
+                border: 0.06rem solid #BCBCBC;
+                margin: 1.5rem 0rem;
             }
-      
+        
             h2 {
-                  font-size: 1.35rem;
+                font-size: 1.35rem;
             }
-      
+        
             .container {
-                  background-color: white;
-                  font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
-                  font-weight: normal;
-                  padding: 0.9rem 1.9rem;
-                  text-align: left;
-                  width: 100%;
-                  align-items: center;
-                  justify-content: center;
-                  box-sizing: border-box;
+                background-color: white;
+                font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+                font-weight: normal;
+                padding: 0.9rem 1.9rem;
+                text-align: left;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
             }
-      
+        
             .logo {
-                  height: 36px;
-                  width: 166px;
-                  margin-bottom: 1.1rem;
+                height: 36px;
+                width: 166px;
+                margin-bottom: 1.1rem;
             }
-      
+        
             .hide {
-                  display: none;
+                display: none;
             }
-      
+        
             .name {
-                  color: #0E5DA0;
-                  font-weight: 900;
-                  font-size: 2rem;
-                  margin: 0;
+                color: #0E5DA0;
+                font-weight: 900;
+                font-size: 2rem;
+                margin: 0;
             }
-      
+        
             .content-description-top {
-                  margin: 0;
-                  margin-top: 0.6rem;
-                  font-weight: 600;
+                margin: 0;
+                margin-top: 0.6rem;
+                font-weight: normal;
             }
-      
+        
             .content-description-top,
             .content-description-bottom {
-                  line-height: 1.4;
-                  font-size: 1rem;
+                line-height: 1.4;
+                font-size: 1rem;
             }
-      
+        
             .text-blue {
-                  color: #0E5DA0;
+                color: #0E5DA0;
             }
-      
+        
             .text-red {
-                  color: #EE5757;
+                color: #EE5757;
             }
-      
+        
             .text-grey {
-                  color: #9A9A9A;
+                color: #9A9A9A;
             }
-      
+        
             .payment-information {
-                  background-color: #F5F5F5;
-                  border-radius: 0.9rem;
-                  padding: 1.3rem 0.6rem;
-                  line-height: 1.4;
+                background-color: #F5F5F5;
+                border-radius: 0.9rem;
+                padding: 1.3rem 0.6rem;
+                line-height: 1.4;
             }
-      
+        
             .payment-method {
-                  font-size: 0.9rem;
+                font-size: 0.9rem;
             }
-      
+        
             .products>h2 {
-                  margin-bottom: 1.9rem;
+                margin-bottom: 1.9rem;
             }
-      
+        
             .products>.product-item {
-                  border: 1px solid #B2B2B2;
-                  width: 100%;
-                  border-radius: 0.9rem;
-                  padding: 1rem;
-                  box-sizing: border-box;
-                  margin-bottom: 1rem;
+                border: 1px solid #B2B2B2;
+                width: 100%;
+                border-radius: 0.9rem;
+                padding: 1rem;
+                box-sizing: border-box;
+                margin-bottom: 1rem;
             }
-      
+        
             .products>.product-item>img {
-                  width: 100px;
-                  height: 100px;
-                  border-radius: 0.9rem;
-                  object-fit: cover;
-                  float: left;
-                  margin-right: 1rem;
-                  margin-bottom: 1rem;
+                width: 100px;
+                height: 100px;
+                border-radius: 0.9rem;
+                object-fit: cover;
+                float: left;
+                margin-right: 1rem;
+                margin-bottom: 1rem;
             }
-      
+        
             .products>.product-item>div {
-                  display: flexbox;
-                  flex-direction: column;
-                  justify-content: center;
-                  box-sizing: border-box;
-                  font-size: 1rem;
+                display: flexbox;
+                flex-direction: column;
+                justify-content: center;
+                box-sizing: border-box;
+                font-size: 1rem;
             }
-      
+        
             .products>.product-item>div>p {
-                  margin: 0;
-                  overflow: hidden;
-                  display: -webkit-box;
-                  -webkit-line-clamp: 3;
-                  -webkit-box-orient: vertical;
+                margin: 0;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
             }
-      
+        
             .products>.product-item>div>.price-quantity {
-                  clear: left;
-                  width: 100%;
-                  overflow: hidden;
+                clear: left;
+                width: 100%;
+                overflow: hidden;
             }
-      
+        
             .products>.product-item>div>.price-quantity>div>.quantity {
-                  width: 25%;
-                  min-width: 6rem;
-                  border: 1px solid #0041CC;
-                  padding: 0.6rem;
-                  border-radius: 0.6rem;
-                  text-align: center;
+                width: 25%;
+                min-width: 6rem;
+                border: 1px solid #0041CC;
+                padding: 0.6rem;
+                border-radius: 0.6rem;
+                text-align: center;
             }
-      
+        
             .products>.product-item>div>.price-quantity>div>.price {
-                  text-align: right;
+                text-align: right;
             }
-      
+        
             .products>.product-item>div>.price-quantity>div>.price>p {
-                  margin: 0;
+                margin: 0;
             }
-      
+        
             .products>.product-item>div>.price-quantity>div>.price>p>span {
-                  font-size: 0.8rem;
-                  font-weight: bold;
-                  background-color: #E50000;
-                  padding: 0.3rem;
-                  color: white;
-                  margin-right: 0.3rem;
+                font-size: 0.8rem;
+                font-weight: bold;
+                background-color: #E50000;
+                padding: 0.3rem;
+                color: white;
+                margin-right: 0.3rem;
             }
-      
+        
             .products>.product-item>div>.price-quantity>div>.price>h1 {
-                  margin: 0;
-                  font-size: 1.3rem;
-                  ;
+                margin: 0;
+                font-size: 1.3rem;
+                ;
             }
-      
+        
             .payment-information,
             .detail-order,
             .appointment {
-                  margin: 0.8rem 0rem;
+                margin: 0.8rem 0rem;
             }
-      
+        
             .payment-information p,
             .detail-order p,
             .appointment p {
-                  margin: 0;
-                  font-size: 1rem;
-                  font-weight: lighter;
-                  width: 100%;
+                margin: 0;
+                font-size: 1rem;
+                font-weight: lighter;
+                width: 100%;
             }
-      
+        
             .bold {
-                  font-weight: bold;
+                font-weight: bold;
             }
-      
+        
             .payment-information p span,
             .payment-information p strong,
             .appointment p span,
             .appointment p strong,
             .detail-order p span,
             .detail-order p strong {
-                  font-size: 0.9rem;
-                  display: inline-block;
-                  width: 49%;
-                  vertical-align: top;
+                font-size: 0.9rem;
+                display: inline-block;
+                width: 49%;
+                vertical-align: top;
             }
-      
+        
             .payment-information p span,
             .appointment p span,
             .detail-order p span {
-                  text-align: left;
+                text-align: left;
             }
-      
+        
             .payment-information p strong,
             .appointment p strong,
             .detail-order p strong {
-                  text-align: right;
+                text-align: right;
             }
-      
+        
             .shipping-address>div * {
-                  margin: 0;
+                margin: 0;
             }
-      
+        
             .footer {
-                  font-size: 0.8rem;
-                  text-align: center;
-                  margin-top: 1.9rem;
+                font-size: 0.8rem;
+                text-align: center;
+                margin-top: 1.9rem;
             }
-      
+        
             .footer p {
-                  margin: 0 1.9rem;
-                  font-size: 0.8rem;
+                margin: 0 1.9rem;
+                font-size: 0.8rem;
             }
-      
+        
             .re-checkout {
-                  display: column;
-                  margin-top: 1.3rem;
-                  margin-bottom: 3rem;
-                  text-align: center;
+                display: column;
+                text-align: center;
             }
-      
+        
+            .re-checkout span {
+                margin-bottom: 2rem;
+                line-height: 5rem;
+            }
+        
             .re-checkout a {
-                  text-decoration: none;
-                  background-color: #0041CC;
-                  color: white;
-                  border-radius: 0.6rem;
-                  font-size: 18px;
-                  font-weight: bold;
-                  padding: 0.6rem 0.9rem;
+                text-decoration: none;
+                background-color: #0041CC;
+                color: white;
+                border-radius: 0.6rem;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 0.6rem 0.9rem;
             }
-      
+        
             .quote {
-                  font-weight: 900;
-                  font-size: 1.8rem;
-                  margin: 5.6rem;
-                  text-align: center;
-                  color: #0E5DA0;
+                font-weight: 900;
+                font-size: 1.8rem;
+                margin: 5.6rem;
+                text-align: center;
+                color: #0E5DA0;
             }
-      
+        
             .footer-delivery {
-                  text-align: center;
-                  margin: 0 20%;
+                text-align: center;
+                margin: 0 20%;
             }
-      
+        
             .footer-delivery h3 {
-                  margin: 1.3rem 0;
-                  font-size: 1rem;
-                  text-transform: uppercase;
-                  font-weight: bold;
+                margin: 1.3rem 0;
+                font-size: 1rem;
+                text-transform: uppercase;
+                font-weight: bold;
             }
-      
+        
             .footer-delivery p {
-                  margin: 0;
-                  font-size: 0.8rem;
+                margin: 0;
+                font-size: 0.8rem;
             }
-      
+        
             .point {
-                  text-align: center;
-                  background-color: #F5F5F5;
-                  border-radius: 0.9rem;
-                  padding: 0.6rem;
-                  margin: 0.9rem auto;
+                text-align: center;
+                background-color: #F5F5F5;
+                border-radius: 0.9rem;
+                padding: 0.6rem;
+                margin: 0.9rem auto;
             }
-      
+        
             .point p {
-                  margin: 0;
-                  font-size: 1rem;
+                margin: 0;
+                font-size: 1rem;
+                font-weight: bold;
             }
-      
+        
             .point h1 {
-                  margin: 0.4rem;
-                  font-size: 2.2rem;
-                  font-weight: bolder;
+                margin: 0.4rem;
+                margin-bottom: 0;
+                font-size: 2.2rem;
+                font-weight: bolder;
             }
-      
+        
             .expired {
-                  text-align: center;
-                  font-size: 0.9rem;
-                  line-height: 1.4;
+                text-align: center;
+                font-size: 0.9rem;
+                line-height: 1.4;
             }
-      
+        
             .voucher {
-                  padding-left: 50px;
-                  box-sizing: border-box;
+                padding-left: 50px;
+                box-sizing: border-box;
             }
-      
+        
             .voucher span {
-                  margin: 0;
-                  font-size: 0.75rem !important;
+                margin: 0;
             }
-      
+        
             .voucher a {
-                  font-size: 0.5rem;
+                font-size: 0.5rem;
             }
-      </style>
+        </style>
 </head>
 
 <body>
       <div class="container">
-            <div class="logo">
-                  <img src="{logo}" alt="logo">
+            <div class="logo"> <img src="{logo}" alt="logo">
             </div>
             <h1 class="name">Hi {nameCustomer},</h1>
-            <p class="content-description-top">Selamat bergabung di Astra Otoshop. Sebagai member baru, Anda akan mendapatkan poin dan nikmati berbagai keuntungan menjadi member kami. Kumpulkan poin Anda segera!</p>
+            <br />
+            <p class="content-description-top">Selamat
+                  bergabung di Astra Otoshop. Sebagai member baru, Anda akan mendapatkan poin dan nikmati berbagai
+                  keuntungan menjadi member kami. Kumpulkan poin Anda segera!</p>
             <div class="point">
-                  <p>Poin Anda sebesar</p>
+                  <p>Poin Anda Sebesar</p>
                   <h1 class="text-blue">{getPoint}</h1>
             </div>
-            <!-- {componentFooter} -->
             <div class="footer">
-                  <p>E-mail ini dibuat otomatis, mohon untuk tidak membalas. Jika butuh bantuan, silakahkan hubungi
-                        <strong class="text-blue"><a href="{urlWhatsApp}" target="_blank">Customer Service
-                                    kami</a></strong>.
-                  </p>
+                  <p>E-mail ini dibuat otomatis, mohon untuk tidak membalas. Jika butuh bantuan silahkan hubungi <strong
+                              class="text-blue"><a rel="noreferrer noopener" href="{urlWhatsApp}"
+                                    target="_blank">Customer Service </a></strong>kami.</p>
             </div>
       </div>
 </body>
